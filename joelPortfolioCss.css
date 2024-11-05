@@ -1,0 +1,762 @@
+/* Google Font CDN link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: white;
+
+}
+::-webkit-scrollbar-thumb{
+    background: red ;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #ffbe17;
+}
+/*nav bar style*/
+nav{
+    width: 100%;
+    height: 10vh;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 30px;
+}
+.logo{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+.logo span{
+    color: #ffbe17;
+    text-shadow: 0 2px 10px  red;
+}
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    opacity: 0 ;
+    pointer-events: none;
+    font-size: clamp(2.5rem,0.5rem + 5vw, 3rem) ;
+}
+.nav-container .links{
+    display: flex;
+  
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.3rem;
+    color: #ffbe17;
+    margin:0 20px;
+    text-decoration: none;
+    font-weight:550;
+    transition: 0.3s linear;
+    background-color: transparent;
+  
+}
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    top:27px;
+    left:0;
+    width: 0%;
+    height:3px;
+    background-color:red;
+    transition: 0.1s linear;
+    
+
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+.nav-container .links a:hover{
+    color:white;
+    
+}
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transition: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brigthness(40%);
+    box-shadow: 0 0 70px  red;
+    transition: 0.2s linear;
+
+}
+.dropdown .links a{
+display: flex;
+color: white;
+text-decoration: none;
+justify-content: center;
+padding: 15px 0;
+align-items: center;
+transition: 0.2s linear;
+}
+.dropdown .links a:hover{
+    background-color: #ffbe17;
+}
+section{
+    width: 100%;
+    min-height: 90vh;
+}
+section .main-container{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    align-items: center;
+
+
+}
+
+.main-container .image{
+    margin-top: 3rem;
+    margin-left: 1rem;
+    width: 371px;
+    height: 95vh;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px  #ffbe17;
+
+}
+.main-container .image img{
+    width: 100%;
+}
+.main-container .image:hover{
+    animation: animate 1s ease-in-out infinite;
+}
+
+
+ @keyframes animate{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.05;
+    }
+    100%{
+        scale: 1;
+    }
+ }
+.main-container .content{
+    color: white;
+    width: 40%;
+   
+}
+.content h1{
+    font-size:clamp(1rem,1rem + 5vw, 1.8rem) ;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.content h1 span{
+    color: red;
+    text-shadow:0 0 20px #ffbe17 ;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.comtent .typewriter{
+    font-size: clamp(1rem,1rem + 5vw, 2.5rem) ;
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.content .typewriter-text{
+    color: #ffbe17;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow:0 0 20px red;
+}
+
+.content p{
+    font-size: clamp(0.4rem,0.2rem + 9vw, 1rem) ;
+    margin: 10px 0;
+
+}
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #ffbe17;
+    border-radius: 50%;
+    color:red;
+    margin: 5px 15px;
+    transition: 0.2s linear;
+}
+.fa-github:hover{
+    scale:1.3;
+    color: gray;
+    background-color: #ffbe17;
+    filter:drop-shadow(0 0 10px );
+}
+.fa-linkedin:hover{
+    scale:1.3;
+    color: rgb(104, 182, 255);
+    background-color: #ffbe17;
+    filter:drop-shadow(0 0 10px );
+}
+.fa-envelope:hover{
+    scale:1.3;
+    color: red;
+    background-color: #ffbe17;
+    filter:drop-shadow(0 0 10px );
+}
+
+.fa-instagram:hover{
+    scale:1.3;
+    color: white;
+    background-color: #ffbe17;
+    filter:drop-shadow(0 0 10px );
+}
+
+
+
+/* .social-links i:hover{
+    scale:1.3;
+    color: white;
+    background-color: #ffbe17;
+    filter:drop-shadow(0 0 10px )
+} */
+.content button{
+    width: 50%;
+    height: 6vh;
+    margin: 3rem;
+    background-color: #ffbe17;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    border-radius: 0.2s linear ;
+}
+.content button:hover{
+scale: 1.1;
+color: white;
+border: 2px solid white;
+background-color: transparent;
+font-weight: 700;
+box-shadow: 0 0 40px white;
+}
+
+
+
+/* About Section */
+section .content{
+    width: 80%;
+    margin: 0px auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.about .about-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+section .title{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+section .title span{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+section .title span::before,section .title span::after{
+    content:" ";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: red;
+    left: 0;
+    bottom: 0;
+}
+section .title span::after
+{
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.about .about-details .left{
+    width: 45%;
+}
+.about .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-details .right{
+    width: 55%;
+}
+
+section .topic{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+
+.about-details .right p{
+    text-align: justify;
+    color: white;
+}
+section .button{
+    margin: 16px 0;
+}
+section .button button
+{
+    outline: none;
+    padding: 3px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: #ffbe17;
+    color: white;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+section .button button:hover{
+    border-color: red;
+    background-color: red;
+    color:white;
+}
+
+.skills{
+    background: black;
+
+}
+.skills .content{
+    padding: 40px 0;
+
+}
+
+.skills .skills-details{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skills-details .text{
+    width: 50%;
+}
+
+
+.skills-details p{
+    color: white;
+    text-align: justify;
+}
+
+.skills .skills-details .experience{
+
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    color: white;
+
+}
+.skills-details .experience .num{
+   color: white;
+   font-size: 80px; 
+}
+.skills-details .experience .experience{
+    color: white;
+    margin-left:20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 6px;
+}
+.skills-details .boxes{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.skills-details .box {
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0;
+    padding-left:3rem ;
+}
+
+.skills-details .boxes .topic{
+    font-size: 20px;
+    color:#ffbe17;
+   
+}
+.skills-details .boxes .per{
+    font-size: 30px;
+    color: red;
+    
+}
+
+
+/* Typewriter 
+container */
+.typewriter {
+    font-size: 2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffbe17;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.services .boxes{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.services .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 3 - 20px);
+    text-align: center;
+    border-radius: 12px;
+padding: 30px 10px;
+box-shadow: 0 5px 10px red;
+cursor: default;
+color: white;
+transition: all 0.4s ease;
+}
+
+.services .boxes .box:hover
+{
+    background: #ffbe17;
+    color:white;
+}
+.services .boxes .box .icon{
+height: 50px;
+width: 50px;
+background: #ffbe17;
+border-radius: 50%;
+text-align: center;
+line-height: 50px;
+font-size: 18px;
+color: white;
+margin: 0 auto 10px auto;
+transition: all 0.4s ease;
+}
+
+.boxes.box:hover .icon{
+    background-color: white;
+    color: red;
+}
+.services .boxes .box:hover .topic,.services .boxes .box:hover p{
+    color: white;
+    transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,.services .boxes .box:hover p
+{
+    color:white;
+}
+/*CONTACT ME CSS */
+.contact{
+    background: black;
+}
+.contact .content{
+    margin:0 auto;
+    padding:30px 0;
+}
+.contact .text{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+footer{
+    background: red;
+    padding: 15px 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+footer .text span joel{
+    font-weight: 900;
+    color: #ffbe17;
+}
+footer .text span a:hover{
+    text-decoration: underline;
+}
+.scroll-button a{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    background:red ;
+    padding: 7px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: #ffbe17(0,0,0,0.15);
+    display: none;
+}
+
+@media(max-width:1000px){
+    footer .text span{
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .about .about-details{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about .about-details .left{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-details .right
+    {
+        width: 90%;
+        margin: 40px 0;
+
+    }
+    .services .boxes .box{
+        margin: 20px 0;
+        width: calc(100% / 2 - 20px);
+
+    }
+}
+@media(max-width:900px){
+    .about .left img{
+        height: 360px;
+        width: 340px;
+    }
+}
+@media(max-width:968px){
+    
+
+    .main-container .image img{
+        object-fit: cover;
+        margin-top: -4px;
+        margin-bottom: -4px;}
+    nav .logo{
+        position: absolute;
+        top:16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    section .main-container{
+        padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+    .hamburg,
+    .cancel{
+        opacity: 1;
+        pointer-events: visible;
+
+    }
+    .nav-container.active .links {
+        display: flex;
+    }
+    .hamburg {
+        display: block;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* Show cancel icon inside the dropdown */
+    /* .cancel {
+        display: block;
+        align-self: flex-end;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #fff;
+    } */
+    .main-container .comtent{
+        margin-top:20px;
+        width: 80%;
+    }
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+.main-container .image{
+    z-index: -1;
+    width: 50%;
+    height: 60%;
+}
+
+.skills .skills-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skills-details .text{
+    width: 100%;
+    margin-bottom: 50px;
+
+}
+.skills-details .boxes{
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+.services .boxes .box{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.contact .text{
+    width: 100%;
+}
+}
+@media(max-width:500px)
+
+{
+
+.main-container .image{
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+  
+}
+.main-container .image img{
+    object-fit: cover;
+    margin-top: -4px;
+    margin-bottom: -4px;
+}
+.main-container .button{
+    margin-top: 15px;
+}
+
+.skills-details .boxes .per{
+    font-size: 50px;
+    color: red;
+}
+}
+
+
+
+
+
+
+
+
+/* Default Navbar Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Hide links and icons by default */
+.links,
+.hamburg,
+.cancel {
+    display: none;
+}
+
+/* Media Query for Smaller Screens (below 968px) */
+@media (max-width: 968px) {
+    .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+    }
+
+    /* Display hamburger icon only on small screens */
+    .hamburg {
+        display: block;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .cancel
+{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+    /* Display dropdown links and cancel icon only when active class is applied */
+    .nav-container.active .links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        width: 150px;
+        border-radius: 8px;
+    }
+
+    /* Ensure cancel icon is visible when menu is active */
+    .nav-container.active .cancel {
+        display: block;
+        font-size: 1.5rem;
+        color: #fff;
+        cursor: pointer;
+        align-self: flex-end;
+        margin-bottom: 10px;
+    }
+
+    /* Hide hamburger icon when menu is active */
+    .nav-container.active .hamburg {
+        display: none;
+    }
+}
