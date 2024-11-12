@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Login page</title>
+    <Style>
+        body{ 
+        background-image:url('netflix img.jpg') ;
+        background-repeat: no-repeat;
+        background-size:auto;
+        height: 100vh;
+        width: 100wh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+
+        } 
+    
+        .co{
+            background-color:rgba(0, 0, 0,0.7);
+            padding-top: 2px;
+            padding-bottom: 40px;
+            background-size:cover;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 5px;
+            height: 400px;
+            width: 400px;
+            margin: auto;
+            margin-top: 90px;
+            color: aliceblue;
+
+        }
+        .cq{margin-left: 60px;
+            font-size: 30px;
+
+        }
+        .cw input{
+            background-color:rgba(59, 59, 59, 0.925);
+            padding: 10px ;
+            padding-right: 50px;
+            padding-left: 15px;
+            margin-left: 60px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 5px;
+        }
+        .ce input{
+            
+            padding: 10px ;
+            padding-right: 99px;
+            padding-left: 100px;
+            margin-left: 60px;
+            margin-top: 30px;
+            background-color: rgb(197, 21, 21);
+            color: rgb(224, 202, 202);
+            border-color: rgb(197, 21, 21);
+            border-radius: 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+       
+        .cr label{ 
+            
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: small;
+           
+
+            
+        }
+        .cr input{ 
+            margin-left: 60px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: small;
+
+            
+        }
+        .cr span{
+            padding-left: 70px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: small;
+        }
+        .cy{
+            
+            padding-right: 110px;
+            padding-left: 1px;
+            margin-left: 60px;
+            margin-top: 30px;
+            font-size: small;
+
+
+        }
+        a{
+            color:white;
+            text-decoration: none;
+        }
+        .span{
+            padding-right: 110px;
+            padding-left: 1px;
+            margin-left: 60px;
+            margin-top: 2px;
+            font-size: small;
+
+        }
+        .overlay{
+            background-color: rgba(0, 0, 0,0.7);
+            height: 100vh;
+            width: 100vw;
+            inset: 0;
+            position: absolute;
+        
+        }
+        .logo{ position: absolute;
+                left: 0px;
+                top: 0px;
+                z-index: 1;
+                padding-left: 15px;
+                padding-top: 15px;
+
+        }
+        </Style>
+</head>
+<body>
+<div class="logo">
+    <img src="Logonetflix.png" alt="Netflix logp" width="95px" height="45px"></div>
+    <div class="overlay">
+   <form class="co" action="login" >
+        <h2 class="cq">Sign In</h2>
+        <div class="cw">
+        <label for="name"></label>
+        <input type="email" placeholder="Email id or Phone Number" id="name">
+        <label for="password"></label>
+        <br><br>
+        <input type="password" placeholder="Password" id="password">
+        <br>
+    </div>
+    <div class="ce">
+        <label for="Sign"></label>
+        <input type="button" value="Sign In" id="Sign">
+        <br><br>
+    </div>
+    <div class="cr">
+    
+        <input style="transform: scale(75%); " type="checkbox" id="Rememberme" value="Remember me">
+        <label for="RememberMe">Remember me</label>
+        <span>Need help?</span>
+
+    </div>
+   
+        <div class="cy"> <p>New to Netflix?<a href="https://www.netflix.com/in/"><strong> Sign Up Now </strong></a> </p> </div>
+        <div class="span">
+       <span>This page is protected by Google reCAPTCHA to ensure you're not a bot. <span style="color:blue">Learn more.</span>
+        </span>
+       
+    </form>
+</div>
+</body>
+</html>
